@@ -3,14 +3,21 @@
   "version": "1.0.0",
   "description": "Email templates for Langoon",
   "dependencies": {
-    "@types/inline-css": "0.0.32",
-    "inline-css": "^2.4.2",
     "typescript": "^3.6.4"
   },
   "scripts": {
     "build": "tsc filesRemove.ts && tsc filesCreate.ts",
     "start": "npm run build && node --no-warnings filesRemove.js && node --no-warnings filesCreate.js"
   },
+  "pre-commit": [
+    "build",
+    "start"
+  ],
   "author": "unitario",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/inline-css": "0.0.32",
+    "inline-css": "^2.4.2",
+    "pre-commit": "^1.2.2"
+  }
 }
