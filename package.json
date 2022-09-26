@@ -4,7 +4,7 @@
   "description": "Email templates for Langoon",
   "dependencies": {
     "typescript": "^3.6.4",
-    "inline-css": "^2.4.2"
+    "inline-css": "^4.0.1"
   },
   "scripts": {
     "build": "tsc filesRemove.ts && tsc filesCreate.ts",
